@@ -9,4 +9,6 @@ loader.load("./hello.wasm", {
   }
 }).then(module => {
   module.exports.hello();
+
+  console.log("100 + 200 = ", module.exports.add(100, 200));
 });
