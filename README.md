@@ -1,10 +1,20 @@
 # Hello, AssemblyScript!
 
+## Setup
+
+```
+npm install
+```
+
 ## Usage
 
 ```
 make
 ```
+
+## Prerequiisites
+
+NodeJS 8.0 or later
 
 ## See Also
 

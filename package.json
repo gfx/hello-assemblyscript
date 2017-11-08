@@ -8,6 +8,9 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">= 8"
+  },
   "devDependencies": {
     "assemblyscript": "^0.3.0"
   },
