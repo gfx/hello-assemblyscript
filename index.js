@@ -9,6 +9,20 @@ loader.load("./hello.wasm", {
   }
 }).then(module => {
   module.exports.hello();
-
-  console.log("100 + 200 = ", module.exports.add(100, 200));
 });
+
+function add(x, y, cb) {
+  if (add.impl) {
+    cb(add.impl(x, y));
+  } else {
+    loader.load("./hello.wasm", {
+      imports: {
+      }
+    }).then(module => {
+      add.impl = module.exports.add;
+      cb(add.impl(x, y));
+    });
+  }
+}
+
+add(1, 2, (result) => console.log(result));
