@@ -26,3 +26,4 @@ function add(x, y, cb) {
 }
 
 add(1, 2, (result) => console.log(result));
+add(10, 20, (result) => console.log(result));
